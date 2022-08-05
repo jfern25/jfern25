@@ -1,1 +1,1376 @@
-dsdsf
+
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+<title>Interval Travel</title>
+<style>	
+		body, table, td, tr { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; }
+		/* Outlook link fix */
+		#outlook a { padding:0; }
+		/* Hotmail background &amp;amp; line height fixes */
+		.ExternalClass { width:100% !important; }
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font,
+		.ExternalClass td, .ExternalClass div { line-height: 100%; }
+		/* Image borders &amp;amp; formatting */
+		img { outline:none; text-decoration:none; display:block; -ms-interpolation-mode: bicubic; }
+		a img { border:none; }
+		/* Re-style iPhone automatic links (eg. phone numbers) */
+		.applelinks a { color:#FF6600; text-decoration: none; }
+		.appleLinkNeutral a { color:#6C7F8B; text-decoration: none; }
+		.appleLinkBlu a { color:#0658a0; text-decoration: none; }
+		/* Hotmail symbol fix for mobile devices */
+		.ExternalClass img[class^=Emoji] { width: 10px !important; height: 10px !important; display: inline !important; }
+		/* Gmail phone number colors */
+		.gc-cs-link { color:#003366 !important; text-decoration: none !important; }
+		.gc-cs-link:hover { text-decoration: underline !important; }
+
+		a:link { color:#003366; text-decoration: none; }
+		a:visited { color:#003366; text-decoration: none; }
+		a:hover { color:#003366; text-decoration: none; }
+		a:active { color:#003366; text-decoration: none; }
+		p { margin-bottom: 0; }
+		.slide-out-div, .cfdebug { display: none; }
+
+		/* Image Swaps/Hovers */
+		.img-swap:hover img,
+		* [lang~="x-img-swap"]:hover img { max-height: 0px;height: 0px; }
+
+		/* HERO IMAGE */
+		img[class=mobilehero], span[class=mobilehero], div[class=mobilehero] { display: none; }
+		img[class=hero], span[class=hero], div[class=hero] { display: block; }
+
+		td[class=mobileOnly],
+		td[class=mobileOnlySpacer] { display: none; line-height:0; visibility: hidden; height: 0; padding: 0; mso-hide:all; }
+
+		/* Media Query for mobile */			
+		@media screen and (max-width: 40em) {
+			table[class=mainContainer] { min-width: 100%!important; width: 100%!important; padding:0 10px; }
+		    
+			img[class=mobilehero], span[class=mobilehero], div[class=mobilehero] { max-height: none !important; width: auto !important; overflow: visible !important; float: none !important; display: block !important; padding:0 !important; margin:0 !important;}
+		    img[class=hero], span[class=hero], div[class=hero] { display: none !important; padding: 0px !important;}
+
+			/* Single Interval logo */
+			td[class=intervalHeaderLogo] { width: 40%!important; text-align: left !important; }
+			td[class=intervalHeaderPhone] { width: 60%!important; text-align: right !important; }
+			table[class=intervalHeaderInterior] { width: 100%!important; }
+
+			/* This resizes tables and images to be 100% wide with a proportionate width */
+			table[class=emailwrapto100pc] { width:100% !important; height:auto !important; min-width: 0px !important; }
+			td[class=emailwrapto100pc] { display: block!important; padding: 10px 20px!important; }
+			table[class=emailwrapto100pcNoBorder] { width:100% !important; height:auto !important; min-width: 0px !important;border:none !important; }
+			td[class=emailwrapto100pcLogos] { display: block!important; }
+			td[class=emailwrapto100pcNumber] { display: block!important; padding: 15px 0px 3px 0px !important; text-align: center!important; width: 100%!important; }
+			td[class=emailwrapto100pc8px] { width: auto!important; display: block!important; padding: 8px !important; }
+			td[class=emailwrapto100pc0pxCenter] { display: block!important; padding: 0px !important; text-align: center!important; width: 100%!important; }
+			table[class=emailwrapto100pcTransparent] { display: block!important; width:100% !important; height:auto !important; min-width: 0px !important; background-color: transparent!important; border: none!important; }
+
+			/* Hide stuff on mobiles */
+			tr[class=emailnomob], table[class=emailnomob], td[class=emailnomob], img[class=emailnomob], span[class=emailnomob] { display:none !important; max-height:0px !important; overflow:hidden !important; }
+			td[class=BorderTop] { width:100%; border-top: 1px dotted #BBBBBB !important;padding: 5px 0 0 0 !important; }
+			td[class=infoDividers] { padding-bottom: 25px !important;border-bottom: 1px solid #003366 !important; }
+
+			/* This resizes body text for mobiles */
+			td[class=orangeBtn] { padding: 0!important; width: 100%!important; display: block!important; }				
+			td[class=orangeBtn] a { display: block!important; background: #ef6e0b !important; color: white!important; padding: 5px 0 4px 0 !important; width: 100%!important; text-decoration: none!important; }
+			
+			/* email specific stuff */
+			td[class=noBorder], table[class=noBorder] { border: none !important; }				
+			td[class=noPadding], table[class=noPadding] { padding: 0 !important; border-left: none!important; }
+			td[class=noPaddingnoBack], table[class=noPaddingnoBack] { padding: 0 !important; border-left: none!important;background: transparent!important; }
+
+			/* mobile quicklinks */
+			td[class=quicklinkIcon] { padding:3px 5px 0 0 !important; }
+			a[class=quicklinkText] { letter-spacing:0 !important; }
+			
+			td[class=font16] { font-size:16px !important; }
+			
+			img[class=img100] { height: inherit!important; max-width: 100%!important; min-width: 100%!important; display: block!important; }
+			table[class=twoColumnSpecialLAST] { width:100% !important; height:auto !important; min-width: 0px !important; max-width: none !important; }
+			table[class=twoColumnOddLastRow] { width:50% !important; height:auto !important; min-width: 0px !important; margin:0 !important; }
+			table[class=twoColumnEvenLastRow] { width:50% !important; height:auto !important; min-width: 0px !important; margin:0 !important; }
+			
+			td[class=colContentOddPadding] { padding: 0 15px 8px 0 !important; margin:0 !important; }
+			td[class=colContentEvenPadding] { padding: 0 0 8px 15px !important; margin:0 !important; }
+			td[class=colOddPadding] { padding: 0 15px 30px 0 !important; margin:0 !important; }
+			td[class=colEvenPadding] { padding: 0 0 30px 15px !important; margin:0 !important; }
+			td[class=colOddPaddingLastRow] { padding: 0 15px 0 0 !important; margin:0 !important; }
+			td[class=colEvenPaddingLastRow] { padding: 0 0 0 15px !important; margin:0 !important; }
+			
+			a[class=footerMenu] { line-height: 30px!important; }
+			
+			td[class=mobilepaddingTopBottom] { padding:8px 0 8px 0 !important; }
+			td[class=mobilepaddingBottom8] { padding:0 0 8px 0 !important; }
+			td[class=mobilepaddingLeftBottom8] { padding:0 15px 8px 0 !important; }
+			
+			td[class=mobilepadding15], table[class=mobilepadding15] { padding:15px !important; }
+			td[class=mobilepadding20], table[class=mobilepadding20] { padding:20px !important; }
+			td[class=mobilepadding25], table[class=mobilepadding25] { padding:25px !important; }
+			
+			td[class=mobilepaddingBottom15] { padding:0 0 15px 0!important; }
+			
+			td[class=mobilepaddingTop25] { padding:25px 0 0 0 !important; }
+			td[class=mobilepaddingBottom25] { padding:0 0 25px 0 !important; }
+			td[class=mobilepaddingLeftRight25] { padding:0 25px !important; }
+			
+			td[class=mobilepaddingTitleLeftRight25] { padding:12px 25px 10px !important; }
+			
+			td[class=topNavButtons] { padding: 0!important; }
+			td[class=topNavButtons] a { display: inline-block!important; padding: 10px 0!important; }
+
+			table[class=headerLogoContainer] { width: 35%!important; }
+			td[class=logoContainer]{ width: 100%!important; padding:5px !important;}
+			div[class=headerPhoneContainer]{ display:block !important; max-height: none !important; overflow: visible !important; text-align:right !important; }
+			img[class=logox2]{ width: 100%!important; height: inherit!important; }
+			img[class=icon]{ width: 70%!important; height: inherit!important; }
+			td[class=tableDetailsMobile],span[class=tableDetailsMobile],div[class=tableDetailsMobile] { display:inline-block !important; float:right !important; max-height: none !important; width:100px !important; vertical-align: middle!important; padding: 10px 5px 0 0 !important; text-align:right !important;}
+			td[class=tableDetailsImg],div[class=tableDetailsImg] { display:inline-block !important; float:right !important; max-height:none !important; overflow:visible !important; vertical-align: middle !important; padding: 8px 0 !important; width: 61px !important; text-align: center !important; display:inline-block !important;}
+			span[class=dealTitle], div[class=dealTitle] { font-size: 16px!important; }
+			
+			td[class=tableSailingBtn]{ vertical-align: middle!important; padding: 5px 0 30px 0 !important; width: 100%!important; border-top:none !important; }
+
+
+			/* Itineraries */
+			tr[class=mobileInfoRow] { border-bottom: 1px solid #d1d7de !important; border-right: 1px solid #d1d7de !important; border-top: 1px solid #d1d7de !important; border-left: 1px solid #d1d7de !important; }
+			td[class=noBorderBottom] { display:block !important;width:100% !important; float:left!important;border-bottom: none !important;padding: 3px 0!important; }
+			td[class=mobileXpadding20], table[class=mobileXpadding20] { padding: 0 20px !important; }
+			td[class=mobileXpadding20last], table[class=mobileXpadding20last] { padding: 0 20px 20px !important; }
+			table[class=mobileBorderBottom] { border-bottom: 1px solid #003366!important; padding: 7px 0 !important; width: 100% !important; }
+			td[class=mobile50percent] { width: 50% !important; padding: 15px 0 10px 0 !important; }
+			td[class=tableDetails] { vertical-align: middle!important; padding: 2px 0px!important; width: 60%!important; }
+			a[class=itineraryBtn] { display:block !important; text-decoration:none !important; }
+
+			td[class=mobileOnly] { display: block !important; visibility: visible !important; line-height: 1 !important; }
+		    td[class=mobileOnlySpacer] { display: block !important; visibility: visible !important; line-height: 1 !important; padding: 14px 0 0 0 !important; }
+		}
+    </style>
+<base href="https://assets.mailcharts.com/emails/d9982957-364b-cac3-3e82-b180b5cc10c4/" target="_blank" /></head>
+
+<body style="padding:0; margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:100%; background-color:#eef2f7 padding-top: 10px;" bgcolor="eef2f7">
+	<!--- there's an extra wrapper table here - this allows us to set the page background in webmail clients (where the body tag is ignored) --->
+	<table class="mainContainer" border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" bgcolor="#eef2f7" style="width: 100%; min-width: 650px;"><tbody><tr>
+<td align="center" valign="top">
+				<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 600px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px;"><tbody><tr>
+<td>
+							<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="648" style="border-collapse: collapse;"><tbody><tr>
+<td style="padding: 15px 0; text-align: center; border-collapse: collapse;">
+										<table class="emailwrapto100pc" width="100%" style="border-collapse: collapse;"><tbody><tr>
+<td width="100%" style="text-align: center;">
+													<span style="color: #003366; font-family: sans-serif; font-size:10px;letter-spacing:0.5px;margin-bottom:5px;margin-left:4px;">2-for-1 Fares, Free Roundtrip Airfare, &amp; More</span>
+												</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+<!--- HEADER ---><table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; background: #ffffff; border-top: 1px solid #d1d7de; border-right: 1px solid #d1d7de; border-left: 1px solid #d1d7de;"><tbody><tr>
+<td style="padding: 30px;" class="mobilepadding15">
+										<!--- SINGLE LOGO / PHONE NUMBER --->
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="intervalHeaderLogo">
+													<table class="intervalHeaderInterior" cellspacing="0" cellpadding="0" align="left" width="251" style="border-collapse: collapse;"><tbody><tr>
+<td align="left" width="100%" style="padding-right: 15px;">
+																<a class="emailwrapto100pc" data-crdl-variant="" href="#">
+																	<img class="emailwrapto100pc" width="128" style="width: 128px;" src="https://www.intervalworld.com/iimedia/images/newsletter/misc/2018-september-promotions/iw_logo.jpg" alt="interval Travel®" title="Interval Travel®" data-mc-image-bytes="7035" data-mc-width="128" data-mc-height="38" data-mc-natural-width="429" data-mc-natural-height="129" /></a>
+															</td>
+														</tr></tbody></table>
+</td>
+												<td class="intervalHeaderPhone">
+													<table class="intervalHeaderInterior" cellspacing="0" cellpadding="0" align="right" width="307" style="border-collapse: collapse;">
+<tbody><tr>
+<td width="100%" align="right" style="font-size:12px; color: #003366; vertical-align:top; text-align:right;">
+																Speak To A Vacation Advisor Now
+															</td>
+														</tr>
+<tr>
+<td width="100%" align="right" style="font-size:17px; font-weight:bold; color:#ef6e0b; vertical-align:top; text-align:right;">
+																<a data-crdl-variant="" style="text-decoration:none; border:none; color:#ef6e0b;" href="#">80-INTERVAL</a>
+															</td>
+														</tr>
+</tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+<!--- Insert Sculpt Content ---><div>
+<div>
+            <div>
+        <div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; background: #ffffff; border-right: 1px solid #d1d7de; border-left: 1px solid #d1d7de;"><tbody><tr>
+<td>
+										<!--- HERO IMAGE --->
+										<table width="100%" cellspacing="0" cellpadding="0" style="margin-bottom:10px;border-collapse: collapse;"><tbody><tr>
+<td class="emailwrapto100pcLogos">
+													<a data-crdl-variant="below-image" href="#">
+														<span class="hero">
+															<img class="hero" src="https://assets.mailcharts.com/emails/images/bd174507da01ed2abb7d5416ac0880f3e52b4d67.jpeg" alt="Interval Travel: Cruise News" title="Interval Travel: Cruise News" width="648" style="vertical-align: middle; max-width: 100%; width: 100%; height: auto;" data-mc-image-bytes="257212" data-mc-width="648" data-mc-height="235" data-mc-natural-width="648" data-mc-natural-height="235" /></span>
+														<span class="mobilehero" style="overflow:hidden; display:none; line-height:0px;">
+															<img class="mobilehero" src="https://assets.mailcharts.com/emails/images/caa09f8a51d1679a6c09e53a2fd230e4aba2b083.jpeg" alt="Interval Travel: Cruise News" title="Interval Travel: Cruise News" width="558" style="vertical-align: middle; max-width: 100%; max-height: 0; width: 0; display:none;" data-mc-image-bytes="293600" data-mc-width="353" data-mc-height="190" data-mc-natural-width="558" data-mc-natural-height="300" /></span>
+													</a>
+											  	</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr><td>
+							<!--- Feature --->
+							<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="border-collapse:collapse; background:#ffffff; border-right: 1px solid #d1d7de; border-left: 1px solid #d1d7de;"><tbody><tr>
+<td>
+										
+										<table class="emailwrapto100pc" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; background: #003366; color: #fff"><tbody><tr>
+<!--/////////////////    Cruises    /////////////////--><td class="topNavButtons" align="center" style="width: 33%; padding: 6px 0; vertical-align: top;">
+													<table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; padding: 0;"><tbody><tr>
+<td class="quicklinkIcon" align="right" style="padding: 4px 10px 0 0;">
+																<a style="text-decoration: none;" data-crdl-variant="below-image" href="#">
+																	<img style="outline:none;border:none; display: inline-block;" src="https://assets.mailcharts.com/emails/images/2fee69ca28d4fff088ab34ff56df81a662fda77a.png" data-mc-image-bytes="283" data-mc-width="16" data-mc-height="16" data-mc-natural-width="16" data-mc-natural-height="16" /></a>
+															</td>
+															<td style="padding: 2px 0 0 0; font-family: sans-serif;">
+																<a class="quicklinkText" style="font-weight: bold; color: #ffffff; text-decoration: none; font-size: 13px; display:block; letter-spacing:0.08em;" data-crdl-variant="below-image" href="#">CRUISES</a>
+															</td>
+														</tr></tbody></table>
+</td>
+
+												<!--/////////////////    Tours    /////////////////-->
+												<td class="topNavButtons" align="center" style="width: 33%; padding: 6px 0; vertical-align: top; border-left: 10px solid #fff; border-right: 10px solid #fff;">
+													<table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; padding: 0;"><tbody><tr>
+<td class="quicklinkIcon" align="right" style="padding: 4px 10px 0 0;">
+																<a style="text-decoration: none;" data-crdl-variant="below-image" href="#">
+																	<img style="outline:none;border:none;display: inline-block;" src="https://assets.mailcharts.com/emails/images/211d6a23e940c34843358d03182d7a65bbf2957d.png" data-mc-image-bytes="286" data-mc-width="18" data-mc-height="16" data-mc-natural-width="18" data-mc-natural-height="16" /></a>
+															</td>
+															<td style="padding: 2px 0 0 0; font-family: sans-serif;vertical-align: middle;">
+																<a class="quicklinkText" style="font-weight: bold; color: #ffffff; text-decoration: none; font-size: 13px; display:block; letter-spacing:0.08em;" data-crdl-variant="below-image" href="#">TOURS</a>
+															</td>
+														</tr></tbody></table>
+</td>
+
+												<!--/////////////////    Deals    /////////////////-->
+												<td class="topNavButtons" align="center" style="width: 33.333%; padding: 6px 0; vertical-align: top;">
+													<table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; padding: 0;"><tbody><tr>
+<td class="quicklinkIcon" align="right" style="padding: 4px 8px 0 0;">
+																<a style="text-decoration: none;" data-crdl-variant="below-image" href="#">
+																	<img style="outline:none;border:none;display: inline-block;" src="https://assets.mailcharts.com/emails/images/ce643df07e261505447d7040cd1ddb74e511f276.png" data-mc-image-bytes="184" data-mc-width="9" data-mc-height="16" data-mc-natural-width="9" data-mc-natural-height="16" /></a>
+															</td>
+															<td align="left" style="padding: 2px 0 0 0; font-family: sans-serif; vertical-align: middle;">
+																<a class="quicklinkText" style="font-weight: bold; color: #ffffff; text-decoration: none; font-size: 13px; display:block; letter-spacing:0.08em;" data-crdl-variant="below-image" href="#">DEALS</a>
+															</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td></tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td style="background:#eef2f7; padding:0;"> </td>
+					</tr></tbody></table>
+</div>
+</div>
+        </div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td>
+										<!--- 2 - COLUMN - TOP DEALS --->
+										<table width="650" class="emailwrapto100pc" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background: #7a8793;"><tbody><tr>
+<td>
+													<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="mobilepaddingTitleLeftRight25" style="padding: 17px 30px 13px; color: #fff; font-size: 16px; font-weight: 700; letter-spacing:0.08em; text-align: left;text-transform: uppercase;">
+																Top Deals of the Week
+															</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+<table width="650" class="emailwrapto100pc" cellspacing="0" cellpadding="0" style="border-collapse: collapse; background: #ffffff; border: 1px solid #d1d7de;"><tbody><tr>
+<td style="padding: 30px;" class="noPadding">
+													<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+<td class="mobilepaddingLeftRight25" style="padding: 0;">
+																<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+<td class="noPadding" style="padding: 0;">
+																			<!--- Specials 1+2 --->
+																			<table class="noPadding" width="100%" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;"><tbody><tr>
+<td class="noPadding">
+																						<table class="twoColumnSpecialLAST" cellspacing="0" cellpadding="0" align="left" width="274" style="width:274px; max-width:274px; margin-right:38px; border:none; border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="mobilepaddingTop25" width="100%">
+																									<a style="display:block;width:100%;" data-crdl-variant="" href="#">
+																										<img class="img100" width="274" style="outline:none; width: 100%; height: inherit; max-width: 274px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/1f60dfeb1e3e580c77ea2584dc81ff0ac495af3e.jpeg" alt="Oceania Cruises – Hot Bonuses Valued up to $3,384 " title="Oceania Cruises – Hot Bonuses Valued up to $3,384 " data-mc-image-bytes="31418" data-mc-width="303" data-mc-height="140" data-mc-natural-width="410" data-mc-natural-height="189" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingTopBottom" width="100%" style="padding: 8px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-weight: 700; font-size: 16px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Oceania Cruises</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom8" width="100%" style="padding: 5px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-size: 12px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Hot Bonuses Valued up to $3,384 </a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom25" width="100%" style="padding: 8px 0 50px 0; vertical-align: top;">
+																									<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td bgcolor="#ef6e0b" align="center" style="padding: 8px 0; color: #ffffff;">
+																												<a data-crdl-variant="" target="_blank" style="font-size: 12px; color: #ffffff; letter-spacing:0.08em; text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box;" href="#"><strong>VIEW DEAL</strong></a>
+																											</td>
+																										</tr></tbody></table>
+</td>
+																							</tr>
+</tbody></table>
+<!--[if mso]>
+																							</td><td>
+																						<![endif]--><table class="twoColumnSpecialLAST" cellspacing="0" cellpadding="0" align="left" width="274" style="width:274px; max-width:274px; border:none; border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="mobilepaddingTop25" width="100%">
+																									<a style="display:block;width:100%;" data-crdl-variant="" href="#">
+																										<img class="img100" width="274" style="outline:none; width: 100%; height: inherit; max-width: 274px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/6062d28fb29b17f32100431f994f7864fd1f0dee.jpeg" alt="Avalon Waterways – Free Airfare + Up to $2,500 Off or More" title="Avalon Waterways – Free Airfare + Up to $2,500 Off or More" data-mc-image-bytes="32437" data-mc-width="303" data-mc-height="140" data-mc-natural-width="410" data-mc-natural-height="189" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingTopBottom" width="100%" style="padding: 8px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-weight: 700; font-size: 16px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Avalon Waterways</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom8" width="100%" style="padding: 5px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-size: 12px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Free Airfare + Up to $2,500 Off or More</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom25" width="100%" style="padding: 8px 0 50px 0; vertical-align: top;">
+																									<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td bgcolor="#ef6e0b" align="center" style="padding: 8px 0;">
+																												<a data-crdl-variant="" target="_blank" style="font-size: 12px; color: #ffffff; letter-spacing:0.08em; text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box;" href="#"><strong>VIEW DEAL</strong></a>
+																											</td>
+																										</tr></tbody></table>
+</td>
+																							</tr>
+</tbody></table>
+</td>
+																				</tr></tbody></table>
+<!--- Specials 3+4 ---><table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="noPadding">
+																						<table class="twoColumnSpecialLAST" cellspacing="0" cellpadding="0" align="left" width="274" style="width:274px; max-width:274px; margin-right:38px; border:none; border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="mobilepaddingTop25" width="100%">
+																									<a style="display:block;width:100%;" data-crdl-variant="" href="#">
+																										<img class="img100" width="274" style="outline:none; width: 100%; height: inherit; max-width: 274px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/c46473e607a17dd7d5b979665660e9ec50593a91.jpeg" alt="Regent Seven Seas Cruises – Up to $2,200 Credit, Pre-Paid Tips + More" title="Regent Seven Seas Cruises – Up to $2,200 Credit, Pre-Paid Tips + More" data-mc-image-bytes="20170" data-mc-width="303" data-mc-height="140" data-mc-natural-width="410" data-mc-natural-height="189" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingTopBottom" width="100%" style="padding: 8px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-weight: 700; font-size: 16px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Regent Seven Seas Cruises</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom8" width="100%" style="padding: 5px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-size: 12px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Up to $2,200 Credit, Pre-Paid Tips + More</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom25" width="100%" style="padding: 8px 0 0 0; vertical-align: top;">
+																									<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td bgcolor="#ef6e0b" align="center" style="padding: 8px 0; color: #ffffff;">
+																												<a data-crdl-variant="" target="_blank" style="font-size: 12px; color: #ffffff; letter-spacing:0.08em; text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box;" href="#"><strong>VIEW DEAL</strong></a>
+																											</td>
+																										</tr></tbody></table>
+</td>
+																							</tr>
+</tbody></table>
+<!--[if mso]>
+																							</td><td>
+																						<![endif]--><table class="twoColumnSpecialLAST" cellspacing="0" cellpadding="0" align="left" width="274" style="width:274px; max-width:274px; border:none; border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="mobilepaddingTop25" width="100%">
+																									<a style="display:block;width:100%;" data-crdl-variant="" href="#">
+																										<img class="img100" width="274" style="outline:none; width: 100%; height: inherit; max-width: 274px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/822db86f304d1b19eca744514ea4116075c83838.jpeg" alt="Paul Gauguin Cruises – Up to $6,800 Off Luxury Voyages!" title="Paul Gauguin Cruises – Up to $6,800 Off Luxury Voyages!" data-mc-image-bytes="27147" data-mc-width="303" data-mc-height="140" data-mc-natural-width="410" data-mc-natural-height="189" /></a>														            
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingTopBottom" width="100%" style="padding: 8px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-weight: 700; font-size: 16px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Paul Gauguin Cruises</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom8" width="100%" style="padding: 5px 0 0 0; vertical-align: top;text-align:center;">
+																									<a style="color: #003366; font-size: 12px; font-family: sans-serif; text-decoration: none;text-align:center;" data-crdl-variant="" href="#">Up to $6,800 Off Luxury Voyages!</a>
+																								</td>
+																							</tr>
+<tr>
+<td class="mobilepaddingBottom25" width="100%" style="padding: 8px 0 0 0; vertical-align: top;">
+																									<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td bgcolor="#ef6e0b" align="center" style="padding: 8px 0;">
+																												<a data-crdl-variant="" target="_blank" style="font-size: 12px; color: #ffffff; letter-spacing:0.08em; text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box;" href="#"><strong>VIEW DEAL</strong></a>
+																											</td>
+																										</tr></tbody></table>
+</td>
+																							</tr>
+</tbody></table>
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td style="background:#eef2f7; padding:0;"> </td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; background: #ffffff; border-right: 1px solid #d1d7de; border-left: 1px solid #d1d7de;"><tbody><tr>
+<td>
+										<!--- HERO IMAGE --->
+										<table width="100%" cellspacing="0" cellpadding="0" style="margin-bottom:0px;border-collapse: collapse;"><tbody><tr>
+<td class="emailwrapto100pcLogos">
+													<a data-crdl-variant="" href="#">
+														<span class="hero">
+															<img class="hero" src="https://assets.mailcharts.com/emails/images/3709ab2857b8037b914eed9632115dbf65ef5c90.jpeg" alt="Interval Travel: Cruise News" title="interval Travel: Cruise News" width="648" style="vertical-align: middle; max-width: 100%; width: 100%; height: auto;" data-mc-image-bytes="115097" data-mc-width="648" data-mc-height="200" data-mc-natural-width="648" data-mc-natural-height="200" /></span>
+														<span class="mobilehero" style="overflow:hidden; display:none; line-height:0px;">
+															<img class="mobilehero" src="https://assets.mailcharts.com/emails/images/aa6b85e69d8f880cff364d4acabe0aded467416e.jpeg" alt="Deal of the Week" title="Deal of the Week" width="558" style="vertical-align: middle; max-width: 100%; max-height: 0; width: 0; display:none;" data-mc-image-bytes="112263" data-mc-width="353" data-mc-height="158" data-mc-natural-width="558" data-mc-natural-height="250" /></span>
+													</a>
+											  	</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td style="background:#eef2f7; padding:0;"> </td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td>
+										<!--- 4 - COLUMN - DESTINATIONS --->
+										<table width="650" class="emailwrapto100pc" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background: #7a8793;"><tbody><tr>
+<td>
+													<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="mobilepaddingTitleLeftRight25" style="padding: 17px 30px 13px; color: #fff; font-size: 16px; font-weight: 700; letter-spacing:0.08em; text-transform: uppercase;text-align:left;">
+																POPULAR DESTINATIONS
+															</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+<table width="650" class="emailwrapto100pc" cellspacing="0" cellpadding="0" style="border-collapse: collapse; background: #ffffff; border: 1px solid #d1d7de;"><tbody><tr>
+<td style="padding: 30px;" class="mobilepadding25">
+													<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+<td class="noPadding" style="padding: 0;">
+																<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+<td class="noPadding" style="padding: 0;">
+																			<!--- Destinations 1-4 --->
+																			<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="noPadding">
+																						<!--- Dest 1 --->
+																						<table class="twoColumnOddLastRow" cellspacing="0" cellpadding="0" align="left" width="135" style="margin-right:15px;border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="colContentOddPadding" align="left" style="padding: 0;">
+																									<a data-crdl-variant="" href="#">
+																										<img class="img100" width="135" style="outline:none; width: 100%; height: inherit; max-width: 135px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/25581cd4ec88e8938014ed1ae2d2eaa33f1643a5.jpeg" alt="Europe Cruises from $1,319" title="Europe Cruises from $1,319" data-mc-image-bytes="7773" data-mc-width="136" data-mc-height="82" data-mc-natural-width="175" data-mc-natural-height="105" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="colOddPadding" style="padding: 15px 0 0 0; text-align:left; vertical-align: top;">
+																									<a style="color: #003366; font-size: 12px; font-weight: 700; font-family: sans-serif; text-decoration: none;text-align:left;" data-crdl-variant="" href="#">Europe Cruises<br /><span style="color:#003366;">From $1,319</span></a>
+																								</td>
+																							</tr>
+</tbody></table>
+<!--[if mso]>
+																							</td><td>
+																						<![endif]--><!--- Dest 2 ---><table class="twoColumnEvenLastRow" cellspacing="0" cellpadding="0" align="left" width="135" style="margin-right:15px;border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="colContentEvenPadding" align="left" style="padding: 0;">
+																									<a data-crdl-variant="" href="#">
+																										<img class="img100" width="135" style="outline:none; width: 100%; height: inherit; max-width: 135px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/37824aff0f118105008f8e34bacbe1945dc9d202.jpeg" alt="South Pacific Cruises from $2,999" title="South Pacific Cruises from $2,999" data-mc-image-bytes="7495" data-mc-width="136" data-mc-height="82" data-mc-natural-width="175" data-mc-natural-height="105" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="colEvenPadding" style="padding: 15px 0 0 0; text-align:left; vertical-align: top;">
+																									<a style="color: #003366; font-size: 12px; font-weight: 700; font-family: sans-serif; text-decoration: none;text-align:left;" data-crdl-variant="" href="#">South Pacific Cruises <br /><span style="color:#003366;">From $2,999</span></a>
+																								</td>
+																							</tr>
+</tbody></table>
+<!--[if mso]>
+																							</td><td>
+																						<![endif]--><!--- Dest 3 ---><table class="twoColumnOddLastRow" cellspacing="0" cellpadding="0" align="left" width="135" style="margin-right:15px;border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="colContentOddPadding" align="left" style="padding: 0;">
+																									<a data-crdl-variant="" href="#">
+																										<img class="img100" width="135" style="outline:none; width: 100%; height: inherit; max-width: 135px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/e63e3db21d61ef7d257c207f73f443387c8e18fa.jpeg" alt="Caribbean Cruises from $1,499" title="Caribbean Cruises from $1,499" data-mc-image-bytes="7234" data-mc-width="136" data-mc-height="82" data-mc-natural-width="175" data-mc-natural-height="105" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="colOddPaddingLastRow" style="padding: 15px 0 0 0; text-align:left; vertical-align: top;">
+																									<a style="color: #003366; font-size: 12px; font-weight: 700; font-family: sans-serif; text-decoration: none;text-align:left;" data-crdl-variant="" href="#">Caribbean Cruises<br /><span style="color:#003366;">From $1,499</span></a>
+																								</td>
+																							</tr>
+</tbody></table>
+<!--[if mso]>
+																							</td><td>
+																						<![endif]--><!--- Dest 4 ---><table class="twoColumnEvenLastRow" cellspacing="0" cellpadding="0" align="left" width="135" style="border-collapse: collapse; background: #FFFFFF;">
+<tbody><tr>
+<td class="colContentEvenPadding" align="left" style="padding: 0;">
+																									<a data-crdl-variant="" href="#">
+																										<img class="img100" width="135" style="outline:none; width: 100%; height: inherit; max-width: 135px; vertical-align: bottom;" src="https://assets.mailcharts.com/emails/images/df55d4bbb2eb1c537a786f0ad20600f53423ae10.jpeg" alt="Explore More Destinations" title="Explore More Destinations" data-mc-image-bytes="2777" data-mc-width="136" data-mc-height="82" data-mc-natural-width="175" data-mc-natural-height="105" /></a>
+																								</td>
+																							</tr>
+<tr>
+<td class="colEvenPaddingLastRow" style="padding: 15px 0 0 0; text-align:left; vertical-align: top;">
+																									<a style="color: #003366; font-size: 12px; font-weight: 700; font-family: sans-serif; text-decoration: none;text-align:left;" data-crdl-variant="" href="#">Explore More Destinations</a>
+																								</td>
+																							</tr>
+</tbody></table>
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td style="background:#eef2f7; padding:0;"> </td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<!--- Top 10 Results --->
+							<table class="emailwrapto100pcTransparent" cellpadding="0" cellspacing="0" width="650" style="table-layout: fixed; border-collapse: collapse; background:#ffffff; border-bottom: 1px solid #d1d7de; border-right: 1px solid #d1d7de; border-top: 1px solid #d1d7de; border-left: 1px solid #d1d7de;">
+<tbody><tr>
+<td style="padding: 30px 30px 0 30px;" class="mobilepadding15">
+										<table class="emailwrapto100pc" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;"><tbody><tr>
+<td>
+													<table class="emailwrapto100pc" width="100%" align="left"><tbody><tr>
+
+															<td align="left" valign="top" style="text-align:left;padding-bottom: 4px;font-size:16px;font-weight:700; color: #003366;">Top 10 Cruises</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr>
+<tr>
+<td>
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="noPadding" style="padding: 30px;">
+													<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; width: 100%;">
+<!--- 1 ---><tbody><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 0 0 20px;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="color:#003366; font-weight:700; font-size:12px;">7-Night Rhine River</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size:12px;">November 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/348a61bffa2566d48206a9cc66ecd4a026521672.undefined" data-mc-image-bytes="648" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 0 0 20px;">
+																<table class="mobileXpadding20" style="width:100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">$750 Off One-of-a-Kind Voyage</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Amsterdam | AmaWaterways</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 0 0 20px;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$2,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 0 0 20px; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width:100%; background:#ef6e0b; color:white; font-size:12px; text-decoration:none;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 1 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 2 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">14-Night Alaska</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">August 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 25px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/899d7ef1af597291882e42a3a2dc2d21697ac4ee.undefined" data-mc-image-bytes="642" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left; color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">2-for-1 Fare &amp; Free Gratuities</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Vancouver | Oceania</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,901
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width:100%; background:#ef6e0b; color:white; font-size:12px; text-decoration:none;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 2 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 3 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">10-Night Caribbean</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">December 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display:none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/348a61bffa2566d48206a9cc66ecd4a026521672.undefined" data-mc-image-bytes="648" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Incredible Oceanview Rate!</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: San Juan | Windstar</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 3 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 4 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">7-Night Mexico</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">October 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/7c9b62a4878cc66700e87e57819b5d7fab6302d6.undefined" data-mc-image-bytes="714" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">$800 Credit + Included Amenities</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Los Angeles | Regent</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 4 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 5 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">5-Night Danube River</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">November 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/bb4a9363f7dd638e092571af0870e50e1e6aaa1d.undefined" data-mc-image-bytes="706" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Save $500 on Enchanting Sailing</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Vienna | Avalon Waterways</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 5 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 6 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">10-Night South Pacific</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">November 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/15b8d9593eadc6fd6adb4071c40324fbd5f4f93e.undefined" data-mc-image-bytes="588" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">HOT Price on Popular Itinerary</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Papeete | Paul Gauguin</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 6 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 7 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left;white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">7-Night Caribbean</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">December 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/e214bb5748d04f09ea7ddcb70adeeb0975bd1ae8.undefined" data-mc-image-bytes="802" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">All-Inclusive Amenities </div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Miami | Crystal</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 7 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 8 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">9-Night Rhine River</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">August 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/287f495a4317c0bd77fb99f0e2b15eda5a6b8a7b.undefined" data-mc-image-bytes="800" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">$400 Off Per Couple – Exclusive!</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Strasbourg | Uniworld</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 8 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 9 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">7-Night Caribbean</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">November 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/0784ade42c45035506fcb98c909da76c75d1b1ec.undefined" data-mc-image-bytes="603" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Low Suite Fare on Holiday Escape</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Bridgetown | Seabourn</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 9 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 10 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="padding: 20px 0 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">10-Night Alaska</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">June 2020</div>
+																					</td>
+																					<td class="mobileOnly" style="display:none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						<img style="float:right;" src="https://assets.mailcharts.com/emails/images/d8bc147506efd87677bd8691bd9629f8f4a7d8cf.undefined" data-mc-image-bytes="462" data-mc-width="70" data-mc-height="20" data-mc-natural-width="70" data-mc-natural-height="20" />
+</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="padding: 20px 0 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">$150 Free Onboard Credit</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Vancouver | Cunard</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="padding: 20px 0 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px 5px; vertical-align: middle;">
+																			<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="padding: 20px 0 0;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 10 --->
+</tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr>
+</tbody></table>
+</td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td style="background:#eef2f7; padding:0;"> </td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<!--- Top 10 Results --->
+							<table class="emailwrapto100pcTransparent" cellpadding="0" cellspacing="0" width="650" style="table-layout: fixed; border-collapse: collapse; background:#ffffff; border-bottom: 1px solid #d1d7de; border-right: 1px solid #d1d7de; border-top: 1px solid #d1d7de; border-left: 1px solid #d1d7de;">
+<tbody><tr>
+<td style="padding: 30px 30px 0 30px;" class="mobilepadding15">
+										<table class="emailwrapto100pc" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;"><tbody><tr>
+<td>
+													<table class="emailwrapto100pc" width="100%" align="left"><tbody><tr>
+
+															<td align="left" valign="top" style="text-align:left;padding-bottom: 4px;font-size:16px;font-weight:700; color: #003366;">Other Great Vacations</td>
+														</tr></tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr>
+<tr>
+<td>
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td class="noPadding" style="padding: 30px;">
+													<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; width: 100%;">
+<!--- 1 ---><tbody><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 0 0 20px;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="color:#003366; font-weight:700; font-size:12px;">The Best of Spain</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size:12px;">9-Day Escorted Tour</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						$1,994
+																					</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 0 0 20px;">
+																<table class="mobileXpadding20" style="width:100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Visit the Casa de Pilatos</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Madrid | Globus</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 0 0 20px;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,994
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 0 0 20px; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width:100%; background:#ef6e0b; color:white; font-size:12px; text-decoration:none;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 1 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 2 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="color:#003366; font-weight:700; font-size:12px;">The Irish Pub</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size:12px;">8-Day Escorted Tour</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						$1,569
+																					</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width:100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Awe at the Cliffs of Moher</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Dublin | CIE Tours</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$1,569
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width:100%; background:#ef6e0b; color:white; font-size:12px; text-decoration:none;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 2 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 3 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="color:#003366; font-weight:700; font-size:12px;">Glories of Greece</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size:12px;">7-Day Escorted Tour</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						$2,195
+																					</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width:100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Discover Ancient Olympia</div>
+																			<div style="padding-top:2px; font-size: 12px;">From: Athens | Insight Vacations</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			$2,195
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width:100%; background:#ef6e0b; color:white; font-size:12px; text-decoration:none;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 3 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 4 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="color:#003366; font-weight:700; font-size:12px;">Playa Resorts</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size:12px;">All-Inclusive</div>
+																					</td>
+																					<td class="mobileOnly" style="display: none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						Call Us
+																					</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table class="mobileXpadding20" style="width:100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Save up to 60% + Bonuses</div>
+																			<div style="padding-top:2px; font-size: 12px;">Resorts in the Caribbean &amp; Mexico</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="border-bottom:1px solid #003366; padding: 20px 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			Call Us
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="border-bottom:1px solid #003366; padding: 20px 0; vertical-align: middle;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width:100%; background:#ef6e0b; color:white; font-size:12px; text-decoration:none;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 4 ---><tr>
+<td class="mobileOnlySpacer" colspan="4" style="display: none; background:#eef2f7; padding:0; mso-hide:all; margin:0; font-size:0; max-height:0;"> </td>
+														</tr>
+<!--- 5 ---><tr class="mobileInfoRow" style="background-color: #ffffff;">
+<td class="noBorderBottom" width="25%" style="padding: 20px 0 0;">
+																<table class="mobileXpadding20" width="100%"><tbody><tr>
+<td style="width: 100%;">
+																			<table class="mobileBorderBottom" cellspacing="0" cellpadding="0" style="border-spacing:0; width:100%;"><tbody><tr>
+<td class="mobile50percent" style="vertical-align:middle; width:100%; text-align:left; white-space:nowrap;">
+																						<div class="dealTitle" style="width:100%; color:#003366; font-weight: 700; font-size: 12px;">Sandals Resorts</div>
+																						<div style="color:#003366; padding-top:2px; font-weight: 600; font-size: 12px;">Adults-Only</div>
+																					</td>
+																					<td class="mobileOnly" style="display:none; padding: 20px 0 10px 0; font-size: 16px; font-weight: 700; color:#003366; vertical-align: middle; width: 100%; text-align: right; float: right;">
+																						Call Us
+																					</td>
+																				</tr></tbody></table>
+</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="40%" style="padding: 20px 0 0;">
+																<table class="mobileXpadding20" style="width: 100%;"><tbody><tr>
+<td class="tableDetails" style="text-align:left;color:#003366;">
+																			<div class="dealDescription" style="font-weight: 700; font-size: 12px;">Up to 65% Off + Instant Credit</div>
+																			<div style="padding-top:2px; font-size: 12px;">Resorts in the Caribbean</div>
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="emailnomob" width="18%" style="padding: 20px 0 0;">
+																<table><tbody><tr>
+<td class="tableDetails" style="font-size: 16px; font-weight: 700; color:#003366; padding: 10px; vertical-align: middle;">
+																			Call Us
+																		</td>
+																	</tr></tbody></table>
+</td>
+															<td class="noBorderBottom" width="17%" style="padding: 20px 0 0;">
+																<!-- Small CTA -->
+																<table class="mobileXpadding20last" style="width: 100%;"><tbody><tr>
+<td style="background: #ef6e0b; padding: 8px 0; text-align: center;">
+																			<strong><a class="itineraryBtn" style="display:block; width: 100%; color: white; text-decoration: none; font-size: 12px;" data-crdl-variant="" href="#">View</a></strong>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<!--- end 5 --->
+</tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr>
+</tbody></table>
+</td>
+					</tr></tbody></table>
+</div>
+<div>        <table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td style="background:#eef2f7; padding:0;"> </td>
+					</tr></tbody></table>
+</div>
+</div>
+				
+				<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>
+							<!--- 3 - COLUMN - ICONS --->
+							<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; background: #003366; color: #ffffff; border: 1px solid #003366;"><tbody><tr>
+<td class="mobilepadding10" style="padding: 22px 30px 30px 30px;">
+										<table width="540" class="emailwrapto100pc" cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse;">
+<tbody><tr>
+<td align="center" style="padding: 8px 0 15px 0; margin: 0; font-size: 18px; font-weight: 600; text-align: center; color: #ffffff">
+													
+</td>
+											</tr>
+<tr>
+<td class="font16" align="center" style="padding: 0 0 8px 0; margin: 0; font-size: 18px; font-weight: 600; text-align: center; color: #ffffff">
+													Plan Your Perfect Vacation Today!
+												</td>
+											</tr>
+<tr>
+<td class="font16" align="center" style="padding: 0 0 8px 0; margin: 0; font-size: 18px; font-weight: 600; text-align: center; color: #ffffff">
+													Call 1-888-287-1550 Now
+												</td>
+											</tr>
+<tr>
+<td align="center" style="padding: 0 0 8px 0; margin: 0; font-size: 12px; font-weight: normal; text-align: center; color: #ffffff">
+													Expert Vacation Advisors are standing by. Plus, you might qualify for additional discounts!
+												</td>
+											</tr>
+</tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="color:#003366; border-collapse: collapse; width: 650px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"><tbody><tr>
+<td>							
+							<!--- FOOTER --->
+							<table class="emailwrapto100pc" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse;"><tbody><tr>
+<td class="mobilepadding10" style="padding: 22px 0 50px 0;">
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;"><tbody><tr>
+<td style="text-align: center; width: 100%;">
+													<table width="100%">
+<tbody><tr>
+
+														</tr>
+<tr>
+<td style="padding: 15px 0; margin: 0; font-size: 16px; font-weight: 700; text-align: center; color: #003366;">
+																Don’t miss out on these incredible offers.<sup style="font-size: 10px;"></sup>
+</td>
+														</tr>
+<tr>
+<td align="center">
+																<table style="border-collapse: collapse;"><tbody><tr>
+<td style="padding: 4px 4px; margin: 0; text-align: center;">
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Home</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Cruises</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Tours</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Resorts</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Destinations</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Deals</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">Blog</a>
+																			 | 
+																			<a class="footerMenu" style="color: #003366; font-size: 13px; font-family: sans-serif; font-weight: normal;" data-crdl-variant="" href="#">About Us</a>
+																		</td>
+																	</tr></tbody></table>
+</td>
+														</tr>
+<tr>
+
+														</tr>
+<tr>
+
+														</tr>
+<tr>
+
+														</tr>
+<tr>
+<td height="12" style="padding: 0; margin: 0; font-size: 9px; text-align: center; color: #9ea8b1;">
+																This email has been sent to: xxx@xxx.xxx | <a data-crdl-variant="" style="color: #003366; text-decoration: none; font-weight: 700;" href="#">Unsubscribe</a> | <a data-crdl-variant="" style="color: #003366; text-decoration: none; font-weight: 700;" href="#">Subscribe</a>
+															</td>
+														</tr>
+</tbody></table>
+</td>
+											</tr></tbody></table>
+</td>
+								</tr></tbody></table>
+</td>
+					</tr></tbody></table>
+</td>
+		</tr></tbody></table>
+
+
+
+</body></html>
